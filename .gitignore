@@ -1,0 +1,10 @@
+.env
+**/.env
+**/.env.local
+**/.venv/
+**/node_modules/
+**/dist/
+**/__pycache__/
+**/.pytest_cache/
+**/uploads/**
+!.gitkeep
