@@ -12,13 +12,10 @@ import DocumentStatus from "../components/documents/DocumentStatus";
 import { deleteDocument, listDocuments, uploadDocument } from "../features/documents/api";
 import { formatDate } from "../lib/utils";
 import { listKnowledgeBases } from "../features/knowledge-bases/api";
-import { listKnowledgeBases } from "../features/knowledge-bases/api";
 
 export default function DocumentsPage() {
   const queryClient = useQueryClient();
   const [search, setSearch] = useState("");
-  const [knowledgeBaseId, setKnowledgeBaseId] = useState("");
-  const knowledgeBases = useQuery({ queryKey: ["knowledge-bases"], queryFn: listKnowledgeBases, retry: false });
   const [knowledgeBaseId, setKnowledgeBaseId] = useState("");
   const knowledgeBases = useQuery({ queryKey: ["knowledge-bases"], queryFn: listKnowledgeBases, retry: false });
   const docs = useQuery({ queryKey: ["documents"], queryFn: listDocuments, retry: false });

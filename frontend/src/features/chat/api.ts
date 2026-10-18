@@ -12,5 +12,3 @@ export async function listConversations() {
 }
 
 export async function getConversation(id: string) { const { data } = await apiClient.get<Conversation & { messages: Array<{id:string; role:"user"|"assistant"; content:string; citations?: any[]; insufficient_evidence?: boolean}> }>(`/conversations/${id}`); return data; }
-
-export async function getConversation(id: string) { const { data } = await apiClient.get<Conversation & { messages: Array<{id:string; role:"user"|"assistant"; content:string; citations?: any[]; insufficient_evidence?: boolean}> }>(`/conversations/${id}`); return data; }
